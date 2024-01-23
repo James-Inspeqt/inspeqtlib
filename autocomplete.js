@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('submitSectionDown').style.display = 'block';
 			document.getElementById('submitSectionUp').style.display = 'block';
     }
-    // If nothing is selected, do nothing (the current step remains visible)
+    // If nothing is selected, do nothing (the current step remains visible) 
   });
 
     nextButton6.addEventListener('click', function() {
