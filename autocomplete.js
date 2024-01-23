@@ -143,13 +143,20 @@ function initAutocomplete() {
     const place = autocomplete.getPlace();
 
     if (place) {
-      const addressInput = document.querySelector('input[ms-code-input="address"]');
-      const cityInput = document.querySelector('input[ms-code-input="city"]');
-      const regionInput = document.querySelector('input[ms-code-input="region"]');
-      const countryInput = document.querySelector('input[ms-code-input="country"]');
-      const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
+const addressInput = document.querySelector('input[ms-code-input="address"]');
+console.log('Address Input:', addressInput);
 
-      console.log(postalCodeInput);
+const cityInput = document.querySelector('input[ms-code-input="city"]');
+console.log('City Input:', cityInput);
+
+const regionInput = document.querySelector('input[ms-code-input="region"]');
+console.log('Region Input:', regionInput);
+
+const countryInput = document.querySelector('input[ms-code-input="country"]');
+console.log('Country Input:', countryInput);
+
+const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
+console.log('Postal Code Input:', postalCodeInput);
       
       addressInput.value = extractAddress(place);
       cityInput.value = extractCity(place);
