@@ -25,6 +25,8 @@ function initAutocomplete() {
       const countryInput = document.querySelector('input[ms-code-input="country"]');
       const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
 
+      console.log(postalCodeInput);
+      
       addressInput.value = extractAddress(place);
       cityInput.value = extractCity(place);
       regionInput.value = extractRegion(place);
