@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // If Radio Selector 2 is checked, go to Submit Section
       document.getElementById('step5').style.display = 'none';
       document.getElementById('submitSectionDown').style.display = 'block';
-			document.getElementById('submitSectionUp').style.display = 'block';
+      document.getElementById('submitSectionUp').style.display = 'block';
     }
     // If nothing is selected, do nothing (the current step remains visible) 
   });
