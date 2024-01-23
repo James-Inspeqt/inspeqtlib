@@ -1,4 +1,4 @@
-<script> document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   // Get the checkboxes and radio buttons
   const checkbox1 = document.getElementById('checkbox1');
   const checkbox2 = document.getElementById('checkbox2');
@@ -288,4 +288,3 @@ function getDrivingDistance(destination) {
   );
 }
 });
-</script>
