@@ -2,6 +2,9 @@ let autocomplete;
 let map; // Declare a variable for the map
 let marker; // Declare a variable for the marker
 
+const addressInput = document.querySelector('input[ms-code-input="address"]');
+console.log(addressInput);
+
 function initAutocomplete() {
   autocomplete = new google.maps.places.Autocomplete(
     document.querySelector('input[ms-code-input="address"]'),
