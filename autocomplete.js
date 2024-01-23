@@ -201,24 +201,6 @@ function extractCity(place) {
   return '';
 }
 
-function extractRegion(place) {
-  for (const component of place.address_components) {
-    if (component.types.includes('administrative_area_level_1')) {
-      return component.long_name;
-    }
-  }
-  return '';
-}
-
-function extractCountry(place) {
-  for (const component of place.address_components) {
-    if (component.types.includes('country')) {
-      return component.long_name;
-    }
-  }
-  return '';
-}
-
 function extractPostalCode(place) {
   for (const component of place.address_components) {
     if (component.types.includes('postal_code')) {
