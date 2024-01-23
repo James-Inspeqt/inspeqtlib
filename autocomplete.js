@@ -1,5 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-
 let autocomplete;
 let map; // Declare a variable for the map
 let marker; // Declare a variable for the marker
@@ -166,4 +164,3 @@ function getDrivingDistance(destination) {
     }
   );
 }
-//  });
