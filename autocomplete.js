@@ -149,19 +149,11 @@ console.log('Address Input:', addressInput);
 const cityInput = document.querySelector('input[ms-code-input="city"]');
 console.log('City Input:', cityInput);
 
-const regionInput = document.querySelector('input[ms-code-input="region"]');
-console.log('Region Input:', regionInput);
-
-const countryInput = document.querySelector('input[ms-code-input="country"]');
-console.log('Country Input:', countryInput);
-
 const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
 console.log('Postal Code Input:', postalCodeInput);
       
       addressInput.value = extractAddress(place);
       cityInput.value = extractCity(place);
-      regionInput.value = extractRegion(place);
-      countryInput.value = extractCountry(place);
       postalCodeInput.value = extractPostalCode(place);
 
       // Center the map on the selected location
