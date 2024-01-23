@@ -4,9 +4,6 @@ let autocomplete;
 let map; // Declare a variable for the map
 let marker; // Declare a variable for the marker
 
-const addressInput = document.querySelector('input[ms-code-input="address"]');
-console.log(addressInput);
-
 function initAutocomplete() {
   autocomplete = new google.maps.places.Autocomplete(
     document.querySelector('input[ms-code-input="address"]'),
@@ -21,17 +18,16 @@ function initAutocomplete() {
     const place = autocomplete.getPlace();
 
     if (place) {
-const addressInput = document.querySelector('input[ms-code-input="address"]');
-console.log('Address Input:', addressInput);
+      const addressInput = document.querySelector('input[ms-code-input="address"]');
+      const cityInput = document.querySelector('input[ms-code-input="city"]');
+      const regionInput = document.querySelector('input[ms-code-input="region"]');
+      const countryInput = document.querySelector('input[ms-code-input="country"]');
+      const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
 
-const cityInput = document.querySelector('input[ms-code-input="city"]');
-console.log('City Input:', cityInput);
-
-const postalCodeInput = document.querySelector('input[ms-code-input="postal-code"]');
-console.log('Postal Code Input:', postalCodeInput);
-      
       addressInput.value = extractAddress(place);
       cityInput.value = extractCity(place);
+      regionInput.value = extractRegion(place);
+      countryInput.value = extractCountry(place);
       postalCodeInput.value = extractPostalCode(place);
 
       // Center the map on the selected location
@@ -73,6 +69,24 @@ function extractComponent(place, componentType) {
 function extractCity(place) {
   for (const component of place.address_components) {
     if (component.types.includes('locality')) {
+      return component.long_name;
+    }
+  }
+  return '';
+}
+
+function extractRegion(place) {
+  for (const component of place.address_components) {
+    if (component.types.includes('administrative_area_level_1')) {
+      return component.long_name;
+    }
+  }
+  return '';
+}
+
+function extractCountry(place) {
+  for (const component of place.address_components) {
+    if (component.types.includes('country')) {
       return component.long_name;
     }
   }
